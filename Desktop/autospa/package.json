@@ -1,0 +1,15 @@
+{
+  "name": "elite-auto-spa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Elite Auto Spa — premium automotive restyling website (static HTML/CSS/JS).",
+  "scripts": {
+    "build": "node build/build.mjs",
+    "dev": "serve -l 3000 .",
+    "start": "serve -l 3000 .",
+    "vercel-build": "mkdir -p /vercel_output/static && cp -r assets /vercel_output/static/ && cp -r services /vercel_output/static/ && cp -r locations /vercel_output/static/ && cp *.html /vercel_output/static/ 2>/dev/null || echo 'Static files copied'"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
