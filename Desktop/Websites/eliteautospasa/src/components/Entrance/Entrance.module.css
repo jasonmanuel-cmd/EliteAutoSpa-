@@ -1,0 +1,80 @@
+.entrance {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #000;
+  overflow: hidden;
+}
+.canvas { position: absolute; inset: 0; touch-action: none; }
+.exitOverlay {
+  position: fixed; inset: 0; background: #000; z-index: 51; pointer-events: none;
+}
+.startTrigger {
+  position: fixed; inset: 0; z-index: 60; background: transparent;
+  border: none; cursor: default; padding: 0; margin: 0;
+}
+.overlayFrame {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none;
+}
+.overlayInner {
+  text-align: center; padding: 0 1rem; max-width: 90vw;
+}
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  line-height: 1.1;
+  text-shadow: 0 4px 40px rgba(0,0,0,0.6);
+}
+.ctaRow { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; align-items: center; }
+.getStartedBtn {
+  background: #ccc;
+  color: #000;
+  border: none;
+  padding: 0.9rem 2.4rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.getStartedBtn:hover { background: #b0b0b0; }
+.getStartedBtn:active { transform: scale(0.97); }
+.welcomeText { text-align: center; }
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  line-height: 1.1;
+  text-shadow: 0 4px 40px rgba(0,0,0,0.6);
+}
+.ctaRow { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; align-items: center; }
+.getStartedBtn {
+  background: #ccc;
+  color: #000;
+  border: none;
+  padding: 0.9rem 2.4rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.getStartedBtn:hover { background: #b0b0b0; }
+.getStartedBtn:active { transform: scale(0.97); }

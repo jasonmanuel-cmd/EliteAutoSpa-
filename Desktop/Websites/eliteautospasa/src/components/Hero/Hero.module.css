@@ -1,0 +1,184 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+}
+
+.imageWrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.placeholderImage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+}
+
+.truckSilhouette {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  height: 50vh;
+  min-height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.headlightGlow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(255, 200, 50, 0.4) 0%, rgba(255, 180, 30, 0.15) 40%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.grille {
+  position: relative;
+  width: 300px;
+  height: 180px;
+  background: linear-gradient(180deg, #222 0%, #111 100%);
+  border-radius: 8px 8px 0 0;
+  box-shadow:
+    inset 0 0 40px rgba(0,0,0,0.5),
+    0 -4px 30px rgba(0,0,0,0.3);
+}
+
+.gridLines {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 28px,
+      rgba(100,100,100,0.08) 28px,
+      rgba(100,100,100,0.08) 30px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 60px,
+      rgba(100,100,100,0.05) 60px,
+      rgba(100,100,100,0.05) 62px
+    );
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.9) 100%);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 700px;
+}
+
+.logoLarge {
+  margin-bottom: 2rem;
+  animation: logoFadeIn 1.2s ease-out;
+}
+
+.headline {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+  animation: headlineFadeIn 1.2s ease-out 0.2s both;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.5);
+}
+
+.actions {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: actionsFadeIn 1.2s ease-out 0.4s both;
+}
+
+.getStarted {
+  background: #cccccc;
+  color: #000000;
+  padding: 1rem 2.8rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+.getStarted:hover {
+  background: #b0b0b0;
+  box-shadow: 0 6px 30px rgba(200,200,200,0.15);
+}
+
+.getStarted:active { transform: scale(0.97); }
+
+.callNowSm {
+  color: #c0c0c0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.9rem 1.5rem;
+  border: 1px solid rgba(192, 192, 192, 0.3);
+  border-radius: 999px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.callNowSm:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+@keyframes logoFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes headlineFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes actionsFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .truckSilhouette { height: 35vh; }
+  .headline { margin-bottom: 2rem; }
+  .actions { gap: 0.8rem; }
+  .getStarted { padding: 0.8rem 2rem; font-size: 0.9rem; }
+  .callNowSm { padding: 0.7rem 1.2rem; font-size: 0.85rem; }
+}
